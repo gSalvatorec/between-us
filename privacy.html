@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Between Us — Aviso de Privacidad</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;1,300;1,400&family=Inter:wght@300;400;500&display=swap');
+
+    :root {
+      --bg:      #0D0F1A;
+      --surface: #161826;
+      --border:  #2A2D45;
+      --accent:  #E8927C;
+      --gold:    #D4A96A;
+      --text:    #F0EEF8;
+      --muted:   #8B8FA8;
+      --faint:   #4A4D65;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      padding: 0 16px 80px;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 24px 44px;
+      border-bottom: 0.5px solid var(--border);
+      margin-bottom: 48px;
+    }
+
+    .logo { font-size: 48px; margin-bottom: 12px; }
+    .app-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--faint); margin-bottom: 14px; }
+
+    header h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(22px, 5vw, 32px);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 16px;
+      border: 0.5px solid var(--border);
+      border-radius: 20px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .container { max-width: 720px; margin: 0 auto; }
+
+    .intro-card {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .intro-card strong { color: var(--text); font-weight: 500; }
+
+    .law-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .law-badge {
+      background: rgba(212, 169, 106, 0.08);
+      border: 0.5px solid rgba(212, 169, 106, 0.2);
+      border-radius: 8px;
+      padding: 8px 12px;
+      text-align: center;
+      font-size: 11px;
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .law-badge span { display: block; font-size: 10px; color: var(--faint); font-weight: 300; margin-top: 2px; }
+
+    section { margin-bottom: 44px; }
+
+    h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 20px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 0.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2 .num {
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--faint);
+      letter-spacing: 1px;
+    }
+
+    p { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul { list-style: none; margin: 12px 0 14px; }
+
+    ul li {
+      font-size: 14px;
+      color: var(--muted);
+      padding: 7px 0 7px 20px;
+      position: relative;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 9px;
+      top: 12px;
+    }
+
+    strong { color: var(--text); font-weight: 500; }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 13px;
+    }
+
+    .data-table th {
+      background: rgba(212, 169, 106, 0.08);
+      color: var(--gold);
+      font-weight: 500;
+      padding: 10px 14px;
+      text-align: left;
+      border: 0.5px solid var(--border);
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .data-table td {
+      padding: 10px 14px;
+      border: 0.5px solid var(--border);
+      color: var(--muted);
+      vertical-align: top;
+    }
+
+    .data-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+    .highlight {
+      background: rgba(212, 169, 106, 0.07);
+      border: 0.5px solid rgba(212, 169, 106, 0.2);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 14px 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .right-card {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+
+    .right-card .right-title { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
+    .right-card .right-desc { font-size: 12px; color: var(--faint); line-height: 1.5; }
+
+    .regional-rights {
+      margin: 16px 0;
+    }
+
+    .regional-item {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 10px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .regional-item .rflag { font-size: 22px; flex-shrink: 0; }
+    .regional-item .rinfo .rname { font-size: 13px; font-weight: 500; color: var(--text); }
+    .regional-item .rinfo .rdesc { font-size: 12px; color: var(--faint); line-height: 1.5; margin-top: 2px; }
+
+    .contact-card {
+      background: linear-gradient(135deg, #1E1030, #161826);
+      border: 0.5px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      text-align: center;
+      margin-top: 64px;
+    }
+
+    .contact-card p { color: var(--muted); font-size: 13px; margin-bottom: 10px; }
+    .contact-card a { color: var(--gold); text-decoration: none; font-weight: 500; font-size: 14px; }
+
+    footer {
+      text-align: center;
+      padding-top: 40px;
+      border-top: 0.5px solid var(--border);
+      margin-top: 64px;
+    }
+
+    footer p { font-size: 11px; color: var(--faint); }
+    footer .logo-footer { font-size: 24px; margin-bottom: 8px; }
+
+    @media (max-width: 600px) {
+      .data-table { font-size: 12px; }
+      .data-table th, .data-table td { padding: 8px 10px; }
+      .rights-grid { grid-template-columns: 1fr; }
+      .law-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">🪺</div>
+    <p class="app-label">Between Us · SKAG</p>
+    <h1>Aviso de Privacidad</h1>
+    <span class="badge">Versión 1.0 · Vigente desde mayo de 2026</span>
+  </header>
+
+  <div class="container">
+
+    <div class="intro-card">
+      En <strong>Between Us</strong>, operado por <strong>SKAG</strong>, entendemos que tu información personal — y la de tu pareja — es íntima y sensible. Este Aviso explica de forma clara qué datos recopilamos, cómo los usamos y cómo los protegemos. Está elaborado para cumplir con los marcos de privacidad aplicables en los distintos países donde opera la app:
+      <div class="law-grid">
+        <div class="law-badge">🇲🇽 LFPDPPP <span>México</span></div>
+        <div class="law-badge">🇪🇺 GDPR <span>Unión Europea</span></div>
+        <div class="law-badge">🇺🇸 CCPA <span>California, EE.UU.</span></div>
+        <div class="law-badge">🇧🇷 LGPD <span>Brasil</span></div>
+        <div class="law-badge">🇬🇧 UK GDPR <span>Reino Unido</span></div>
+        <div class="law-badge">🌎 General <span>Resto del mundo</span></div>
+      </div>
+    </div>
+
+    <!-- 1 -->
+    <section>
+      <h2><span class="num">01</span> Identidad del responsable</h2>
+      <p>El responsable del tratamiento de tus datos personales es:</p>
+      <ul>
+        <li><strong>Organización:</strong> SKAG</li>
+        <li><strong>Aplicación:</strong> Between Us</li>
+        <li><strong>Correo de contacto:</strong> betweenuss.app@gmail.com</li>
+        <li><strong>Ubicación principal de operación:</strong> México</li>
+      </ul>
+      <p>Para usuarios en la Unión Europea: SKAG actúa como <strong>Responsable del Tratamiento</strong> (Data Controller) conforme al GDPR.</p>
+    </section>
+
+    <!-- 2 -->
+    <section>
+      <h2><span class="num">02</span> Datos personales que recopilamos</h2>
+      <p>Recopilamos únicamente los datos necesarios para el funcionamiento de la app:</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Categoría</th>
+            <th>Datos específicos</th>
+            <th>Finalidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Identidad</strong></td>
+            <td>Nombre de usuario, foto de perfil (opcional)</td>
+            <td>Identificarte en la app y ante tu pareja</td>
+          </tr>
+          <tr>
+            <td><strong>Contacto</strong></td>
+            <td>Correo electrónico</td>
+            <td>Crear cuenta, autenticación, comunicados</td>
+          </tr>
+          <tr>
+            <td><strong>Financieros (referencial)</strong></td>
+            <td>Montos de gastos, descripción, categoría, fecha, moneda</td>
+            <td>Seguimiento de gastos compartidos</td>
+          </tr>
+          <tr>
+            <td><strong>Contenido personal</strong></td>
+            <td>Momentos del diario, fotos, notas, metas, respuestas a preguntas</td>
+            <td>Mostrar en tu espacio privado compartido</td>
+          </tr>
+          <tr>
+            <td><strong>Preferencias</strong></td>
+            <td>Estado de ánimo, intereses/hobbies, idioma, moneda, zona horaria</td>
+            <td>Personalizar la experiencia de la app</td>
+          </tr>
+          <tr>
+            <td><strong>Técnicos</strong></td>
+            <td>Token de push notifications, tipo de dispositivo</td>
+            <td>Enviar notificaciones y mantener la sesión</td>
+          </tr>
+          <tr>
+            <td><strong>Biométricos (opcional)</strong></td>
+            <td>Huella dactilar o reconocimiento facial</td>
+            <td>Desbloquear la app con biometría local</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="highlight">
+        ⚠️ Los datos biométricos <strong>nunca se transmiten ni almacenan en nuestros servidores</strong>. Son procesados exclusivamente en tu dispositivo por el sistema operativo Android. No tenemos acceso a ellos.
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section>
+      <h2><span class="num">03</span> Base legal para el tratamiento</h2>
+      <p>Tratamos tus datos bajo las siguientes bases legales, según el marco aplicable en tu región:</p>
+      <ul>
+        <li><strong>Ejecución de contrato:</strong> datos necesarios para prestarte el servicio (cuenta, gastos, momentos).</li>
+        <li><strong>Consentimiento:</strong> datos opcionales como foto de perfil, hobbies, biometría y comunicaciones de marketing.</li>
+        <li><strong>Interés legítimo:</strong> mejoras técnicas, seguridad y prevención de fraude.</li>
+        <li><strong>Obligación legal:</strong> cuando la ley aplicable en tu país nos lo exija.</li>
+      </ul>
+      <p>Puedes retirar tu consentimiento en cualquier momento sin afectar el tratamiento previo ni el funcionamiento esencial del servicio.</p>
+    </section>
+
+    <!-- 4 -->
+    <section>
+      <h2><span class="num">04</span> Finalidades del tratamiento</h2>
+      <p><strong>Finalidades primarias</strong> (necesarias para el servicio):</p>
+      <ul>
+        <li>Crear y gestionar tu cuenta de usuario.</li>
+        <li>Habilitar y sincronizar el espacio compartido entre dos usuarios.</li>
+        <li>Mostrar gastos, momentos, metas y preguntas dentro de la app.</li>
+        <li>Enviar notificaciones push relacionadas con la actividad en tu espacio.</li>
+        <li>Procesar y entregar emails de confirmación de cuenta e invitaciones.</li>
+        <li>Convertir montos entre divisas para visualización informativa.</li>
+      </ul>
+      <p><strong>Finalidades secundarias</strong> (puedes oponerte sin afectar el servicio):</p>
+      <ul>
+        <li>Análisis estadísticos anónimos y agregados para mejorar la app.</li>
+        <li>Envío de comunicados sobre nuevas funcionalidades.</li>
+      </ul>
+    </section>
+
+    <!-- 5 -->
+    <section>
+      <h2><span class="num">05</span> Transferencia de datos y proveedores</h2>
+      <p><strong>No vendemos, rentamos ni comercializamos tus datos personales</strong> con terceros bajo ninguna circunstancia.</p>
+      <p>Compartimos datos únicamente con proveedores de infraestructura necesarios para operar el servicio:</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Proveedor</th>
+            <th>Función</th>
+            <th>Ubicación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Supabase</strong></td>
+            <td>Base de datos, autenticación, almacenamiento de archivos</td>
+            <td>EE.UU. (AWS us-east-1)</td>
+          </tr>
+          <tr>
+            <td><strong>Expo / EAS</strong></td>
+            <td>Distribución de la app y push notifications</td>
+            <td>EE.UU.</td>
+          </tr>
+          <tr>
+            <td><strong>Google (Gmail SMTP)</strong></td>
+            <td>Envío de emails de invitación y confirmación</td>
+            <td>Global</td>
+          </tr>
+          <tr>
+            <td><strong>Frankfurter API</strong></td>
+            <td>Tipos de cambio entre divisas (sin datos personales)</td>
+            <td>Alemania (EU)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Para usuarios en la <strong>Unión Europea</strong>: la transferencia de datos a servidores en EE.UU. (Supabase/AWS, Expo) se realiza bajo las cláusulas contractuales tipo aprobadas por la Comisión Europea (SCCs) u otras salvaguardias adecuadas.</p>
+    </section>
+
+    <!-- 6 -->
+    <section>
+      <h2><span class="num">06</span> Medidas de seguridad</h2>
+      <ul>
+        <li><strong>Cifrado en tránsito:</strong> todas las comunicaciones se realizan por HTTPS/TLS.</li>
+        <li><strong>Contraseñas hasheadas:</strong> nunca se almacenan en texto plano (bcrypt via Supabase Auth).</li>
+        <li><strong>Row Level Security (RLS):</strong> cada usuario solo puede acceder a sus propios datos y los de su espacio compartido — a nivel de base de datos.</li>
+        <li><strong>Sesión segmentada:</strong> el token de sesión se almacena fragmentado en el dispositivo para evitar vulnerabilidades de tamaño.</li>
+        <li><strong>Acceso mínimo necesario:</strong> solo los dos miembros de un espacio pueden ver su contenido.</li>
+        <li><strong>Notificación de brechas:</strong> en caso de una violación de seguridad que afecte tus datos, notificaremos a los usuarios afectados dentro de los plazos exigidos por la ley aplicable (72 horas para usuarios en la UE, conforme al GDPR).</li>
+      </ul>
+    </section>
+
+    <!-- 7 -->
+    <section>
+      <h2><span class="num">07</span> Tiempo de conservación</h2>
+      <p>Conservamos tus datos mientras tu cuenta esté activa. Al eliminar tu cuenta:</p>
+      <ul>
+        <li>Tus datos personales se eliminan de nuestros servidores en un plazo máximo de <strong>30 días naturales</strong>.</li>
+        <li>Los backups automáticos de Supabase pueden retener copias cifradas por hasta <strong>7 días adicionales</strong>.</li>
+        <li>Algunos datos podrían conservarse por períodos mayores si así lo exige la ley fiscal o legal aplicable en tu país.</li>
+      </ul>
+    </section>
+
+    <!-- 8 -->
+    <section>
+      <h2><span class="num">08</span> Tus derechos según tu región</h2>
+      <p>Todos los usuarios tienen los derechos básicos de <strong>Acceso, Rectificación, Cancelación y Oposición (ARCO)</strong>. Dependiendo de tu región, puedes tener derechos adicionales:</p>
+
+      <div class="rights-grid">
+        <div class="right-card">
+          <div class="right-title">🔍 Acceso</div>
+          <div class="right-desc">Conocer qué datos tenemos sobre ti y cómo los usamos.</div>
+        </div>
+        <div class="right-card">
+          <div class="right-title">✏️ Rectificación</div>
+          <div class="right-desc">Corregir datos inexactos o incompletos.</div>
+        </div>
+        <div class="right-card">
+          <div class="right-title">🗑️ Supresión</div>
+          <div class="right-desc">Solicitar la eliminación de tus datos ("derecho al olvido").</div>
+        </div>
+        <div class="right-card">
+          <div class="right-title">🚫 Oposición</div>
+          <div class="right-desc">Oponerte al tratamiento para finalidades secundarias.</div>
+        </div>
+        <div class="right-card">
+          <div class="right-title">📦 Portabilidad</div>
+          <div class="right-desc">Recibir tus datos en formato estructurado y legible por máquina.</div>
+        </div>
+        <div class="right-card">
+          <div class="right-title">⏸️ Limitación</div>
+          <div class="right-desc">Solicitar la restricción del tratamiento en ciertos casos.</div>
+        </div>
+      </div>
+
+      <p style="margin-top:16px;">Derechos adicionales por región:</p>
+      <div class="regional-rights">
+        <div class="regional-item">
+          <div class="rflag">🇪🇺</div>
+          <div class="rinfo">
+            <div class="rname">Unión Europea / Reino Unido (GDPR / UK GDPR)</div>
+            <div class="rdesc">Derecho a no ser objeto de decisiones automatizadas, a presentar queja ante la autoridad supervisora de tu país miembro, y a retirar el consentimiento en cualquier momento.</div>
+          </div>
+        </div>
+        <div class="regional-item">
+          <div class="rflag">🇺🇸</div>
+          <div class="rinfo">
+            <div class="rname">California, EE.UU. (CCPA / CPRA)</div>
+            <div class="rdesc">Derecho a conocer las categorías de datos recopilados, a optar por no participar en la "venta" de datos (no aplicable — no vendemos datos), y a no ser discriminado por ejercer tus derechos.</div>
+          </div>
+        </div>
+        <div class="regional-item">
+          <div class="rflag">🇧🇷</div>
+          <div class="rinfo">
+            <div class="rname">Brasil (LGPD)</div>
+            <div class="rdesc">Derecho a confirmación del tratamiento, acceso, corrección, anonimización, portabilidad y revocación del consentimiento. Autoridad: ANPD (gov.br/anpd).</div>
+          </div>
+        </div>
+        <div class="regional-item">
+          <div class="rflag">🇲🇽</div>
+          <div class="rinfo">
+            <div class="rname">México (LFPDPPP)</div>
+            <div class="rdesc">Derechos ARCO completos. Autoridad: INAI (inai.org.mx) · 800 835 4324.</div>
+          </div>
+        </div>
+      </div>
+
+      <p>Para ejercer cualquiera de estos derechos, envía una solicitud a <strong>betweenuss.app@gmail.com</strong> con tu nombre, correo registrado y descripción del derecho que deseas ejercer. Responderemos en un plazo máximo de <strong>30 días naturales</strong> (o el plazo exigido por la ley de tu región si es menor).</p>
+    </section>
+
+    <!-- 9 -->
+    <section>
+      <h2><span class="num">09</span> Cookies y almacenamiento local</h2>
+      <p>Between Us es una aplicación móvil nativa y <strong>no utiliza cookies de navegador</strong>. Sin embargo, usamos tecnologías equivalentes en dispositivos móviles:</p>
+      <ul>
+        <li><strong>AsyncStorage:</strong> almacenamiento local en el dispositivo para guardar la sesión y preferencias. Nunca se comparte con terceros.</li>
+        <li><strong>Tokens de sesión:</strong> generados por Supabase Auth y almacenados de forma segura y fragmentada en tu dispositivo.</li>
+        <li><strong>Caché de tipos de cambio:</strong> las tasas de conversión se almacenan localmente por hasta 6 horas para reducir llamadas externas.</li>
+      </ul>
+    </section>
+
+    <!-- 10 -->
+    <section>
+      <h2><span class="num">10</span> Menores de edad</h2>
+      <p>Between Us <strong>no está dirigida a personas menores de 18 años</strong> (o la mayoría de edad en su país de residencia si es mayor). No recopilamos intencionalmente datos de menores.</p>
+      <p>Si eres padre, madre o tutor y crees que tu hijo ha creado una cuenta, contáctanos a <strong>betweenuss.app@gmail.com</strong> para eliminar la información de inmediato.</p>
+    </section>
+
+    <!-- 11 -->
+    <section>
+      <h2><span class="num">11</span> Modificaciones al aviso</h2>
+      <p>SKAG puede actualizar este Aviso de Privacidad cuando sea necesario. Te notificaremos de cambios sustanciales a través de la app o por correo electrónico con al menos <strong>15 días de anticipación</strong>. La fecha de vigencia siempre estará visible al inicio de este documento.</p>
+    </section>
+
+    <!-- Contacto -->
+    <div class="contact-card">
+      <p>¿Tienes preguntas sobre tu privacidad?</p>
+      <a href="mailto:betweenuss.app@gmail.com">betweenuss.app@gmail.com</a>
+      <p style="margin-top: 10px;">Respondemos dentro del plazo legal aplicable según tu región.</p>
+    </div>
+
+    <footer>
+      <div class="logo-footer">🪺</div>
+      <p>Between Us · Operado por SKAG</p>
+      <p style="margin-top: 6px;">© 2026 SKAG. Todos los derechos reservados.</p>
+      <p style="margin-top: 6px;"><a href="terminos-y-condiciones.html" style="color: var(--gold); text-decoration: none;">Ver Términos y Condiciones →</a></p>
+    </footer>
+
+  </div>
+</body>
+</html>
